@@ -15,7 +15,7 @@ function Dashboard() {
   const fetchCourses = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/getAllCourse",
+        "https://course-backend-a0oh.onrender.com/api/getAllCourse",
         { headers }
       );
 
@@ -28,7 +28,7 @@ function Dashboard() {
   const fetchRegisteredCourses = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/getRegisteredCourse",
+        "https://course-backend-a0oh.onrender.com/api/getRegisteredCourse",
         { headers }
       );
 
@@ -41,7 +41,7 @@ function Dashboard() {
   const fetchAllRegistrations = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/getAllStudentsCourseRegisteration"
+        "https://course-backend-a0oh.onrender.com/api/getAllStudentsCourseRegisteration"
       );
 
       setAllRegistrations(res.data);
@@ -53,7 +53,7 @@ function Dashboard() {
   const registerCourse = async (courseId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/registerCourse",
+        "https://course-backend-a0oh.onrender.com/api/registerCourse",
         { courseId },
         { headers }
       );
@@ -68,7 +68,7 @@ function Dashboard() {
   const unregisterCourse = async (courseId) => {
     try {
       await axios.post(
-        "http://localhost:5000/api/unregisterCourse",
+        "https://course-backend-a0oh.onrender.com/api/unregisterCourse",
         { courseId },
         { headers }
       );
